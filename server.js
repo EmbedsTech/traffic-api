@@ -5,8 +5,6 @@ const cors = require("cors");
 const app = express();
 app.use(cors());
 
-const admin = require("firebase-admin");
-
 const serviceAccount = JSON.parse(process.env.FIREBASE_KEY);
 
 admin.initializeApp({
@@ -65,6 +63,7 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, ()=>{
   console.log("Server running on port " + PORT);
 });
+
 
 
 
